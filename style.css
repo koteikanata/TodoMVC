@@ -1,0 +1,218 @@
+html {
+    font-family: 'Spot Mono', Helvetica, sans-serif;
+    text-align: center;
+}
+
+body {
+    width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+h2 {
+    font-size: 50px;
+    color: rgb(214, 86, 39, 0.4);
+    letter-spacing: 5px;
+}
+
+button {
+    border: none;
+    border-radius: 5px;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    display: flex;
+}
+
+.main-box {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 5px;
+}
+
+.sub-box {
+    border-radius: 3px;
+}
+
+.head-line {
+    display: flex;
+    padding: 5px;
+}
+
+.complete-all {
+    display: block;
+}
+
+.remove-todo {
+    background: none;
+    display: none;
+    position: relative;
+}
+
+.input-todo {
+    flex: content;
+    padding: 5px;
+    border: none;
+    resize: none;
+}
+
+.input-todo::placeholder {
+    font-style: italic;
+    color: rgba(110, 102, 99, 0.4);
+    font-size: 18px;
+}
+
+form:focus {
+    border: none;
+    outline: none;
+}
+
+input:focus {
+    border: none;
+    outline: none;
+}
+
+.list-todos {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+/* Checkbox styles */
+.checkbox {
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    margin-top: 2px;
+    align-items: center;
+}
+
+.checkbox li {
+    height: 25px;
+}
+
+.checkbox input[type="checkbox"] {
+    display: block;
+    position: absolute;
+    opacity: 0;
+}
+
+.checkbox input[type="checkbox"]:focus~span {
+    display: block;
+    border: 2px solid #aab0b9;
+}
+
+.checkbox input[type="checkbox"]:focus:checked~span {
+    display: block;
+    border: 2px solid #20644c;
+}
+
+.checkbox input[type="checkbox"]:checked~span {
+    display: block;
+    color: #ffffff;
+    background: #329e78 url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+DQo8c3ZnIHdpZHRoPSIxMiIgaGVpZ2h0PSI5IiB2aWV3Qm94PSIwIDAgMTIgOSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCiAgPHBhdGggZD0iTTQuNTc1IDguOTc3cy0uNDA0LS4wMDctLjUzNi0uMTY1TC4wNTcgNS42NGwuODI5LTEuMjI3TDQuNDcgNy4yNjggMTAuOTIxLjA4NmwuOTIzIDEuMTAzLTYuODYzIDcuNjRjLS4xMzQtLjAwMy0uNDA2LjE0OC0uNDA2LjE0OHoiIGZpbGw9IiNGRkYiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPg0KPC9zdmc+) 50% 40% no-repeat;
+    border: 2px solid #329e78;
+}
+
+.checkbox input[type="checkbox"]:checked~div {
+    display: block;
+    text-decoration: line-through;
+    color: #858990;
+}
+
+.checkbox input[type="text"] {
+    border: 0px;
+    margin-right: auto;
+    width: 100%;
+    margin-left: 5px;
+    height: 25px;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    
+}
+
+.checkbox input[type="text"]:hover {
+    background-color:  #f0f0f0;
+}
+
+.checkbox span {
+    display: block;
+    border-radius: 3px;
+    position: relative;
+    width: 1rem;
+    height: 1rem;
+    background-color: #d4d7dc;
+    border: 2px solid #d4d7dc;
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-right: auto;
+}
+
+.checkbox div {
+    text-align: start;
+    margin-left: 5px;
+    margin-right: auto;
+    flex: 50%;
+}
+
+.checkbox:hover {
+    background: #e8e8e8a9;
+    border-radius: 2px;
+    padding-right: 5px;
+}
+
+.checkbox:hover .remove-todo {
+    display: block;
+}
+
+.footer-line {
+    display: flex;
+    width: 100%;
+    border-top: #bdc1c6 solid 1px;
+}
+
+.amount-items {
+    position: relative;
+    width: 183px;
+}
+
+.footer-buttons {
+    display: block;
+    position: relative;
+}
+
+.button-clear {
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    background-color: #ffffff;
+    font-family: 'Spot Mono', Helvetica, sans-serif;
+    font-size: inherit;
+    font-weight: 300;
+    margin-left: auto;
+}
+
+button:hover {
+    color: #858990;
+    cursor: pointer;
+}
