@@ -33,6 +33,7 @@ function setItems() {
         ID = items.length - 1;
         items.forEach(item => renderItem(item));
         checkNeededButtonClearAll();
+        amountItemsUpdate();
     }
 }
 
